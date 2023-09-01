@@ -96,7 +96,7 @@ export default async function handler(request: VercelRequest, response: VercelRe
         const copiedContent = JSON.parse(content);
         if (estimateTokenCount(copiedContent) < 4096) {
             const completion = await openai.createChatCompletion({
-                model: "gpt-3.5-turbo",
+                model: "gpt-3.5-turbo-16k",
                 messages: [
                     {
                         role: "system",
@@ -125,7 +125,7 @@ export default async function handler(request: VercelRequest, response: VercelRe
                 str = `${node}`
             }
             const completion = await openai.createChatCompletion({
-                model: "gpt-3.5-turbo",
+                model: "gpt-3.5-turbo-16k",
                 messages: [
                     {
                         role: "system",

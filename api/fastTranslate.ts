@@ -78,7 +78,7 @@ export default async function handler(request: VercelRequest, response: VercelRe
                 tasks.push(
                     openai
                         .createChatCompletion({
-                            model: "gpt-3.5-turbo",
+                            model: "gpt-3.5-turbo-16k",
                             messages: [
                                 ...messages,
                                 {
@@ -111,7 +111,7 @@ export default async function handler(request: VercelRequest, response: VercelRe
         tasks.push(
             openai
                 .createChatCompletion({
-                    model: "gpt-3.5-turbo",
+                    model: "gpt-3.5-turbo-16k",
                     messages: [
                         ...messages,
                         {
@@ -151,7 +151,7 @@ export default async function handler(request: VercelRequest, response: VercelRe
         //     })())
         //     tasks.push(
         //         openai.createChatCompletion({
-        //             model: "gpt-3.5-turbo",
+        //             model: "gpt-3.5-turbo-16k",
         //             messages,
         //         }).then(r => {
         //             console.log('chunk done ' + i)
@@ -171,7 +171,7 @@ export default async function handler(request: VercelRequest, response: VercelRe
         //     content: JSON.stringify(requireTranslation.map((t) => t[1])),
         // });
         // const completion = await openai.createChatCompletion({
-        //     model: "gpt-3.5-turbo",
+        //     model: "gpt-3.5-turbo-16k",
         //     messages,
         // });
         // const translatedRaw = matchJSON(`${completion.data.choices[0].message?.content}`);

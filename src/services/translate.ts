@@ -48,7 +48,7 @@ export async function translateService(req: IReqBody) {
             console.log('freezeChunk = ', freezeChunk)
             const finishedTask = await createChatCompletion(
                 {
-                    model: "gpt-3.5-turbo",
+                    model: "gpt-3.5-turbo-16k",
                     messages: [
                         ...messages,
                         {
@@ -81,7 +81,7 @@ export async function translateService(req: IReqBody) {
     const freezeChunk = [...chunk];
     const ft = await createChatCompletion(
         {
-            model: "gpt-3.5-turbo",
+            model: "gpt-3.5-turbo-16k",
             messages: [
                 ...messages,
                 {

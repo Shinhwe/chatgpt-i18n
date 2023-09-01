@@ -7,7 +7,7 @@ export class CommonStore {
         baseURL: "https://xxx.openai.azure.com",
         deployName: "xxx",
         serviceProvider: "azure",
-        model: "gpt-3.5-turbo-0301",
+        model: "gpt-3.5-turbo-16k-0301",
     };
     constructor() {
         makeAutoObservable(this);

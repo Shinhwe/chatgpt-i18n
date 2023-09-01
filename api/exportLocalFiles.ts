@@ -19,7 +19,7 @@ export default async function handler(request: VercelRequest, response: VercelRe
         const result: { lang: string; content: string }[] = [];
         for (let lang of langList) {
             const completion = await openai.createChatCompletion({
-                model: "gpt-3.5-turbo",
+                model: "gpt-3.5-turbo-16k",
                 messages: [
                     {
                         role: "system",
